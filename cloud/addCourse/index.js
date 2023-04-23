@@ -40,5 +40,12 @@ exports.main = async (event, context) => {
     return await db.collection('Course').where({
       courseName:event.cname
     }).get()
+  }else if(event.option == 'findId'){
+    const courseInfo = await db.collection('Course').where({
+      courseName:event.cname,
+      courseClass:event.cclass
+    }).get()
+    let Info = courseInfo.data[0]._id
+    return Info
   }
 }

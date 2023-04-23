@@ -52,3 +52,33 @@
   background-color: #ccc;
   color: #fff;
 }
+.nologin{
+  width: auto;
+}
+.bottom-sign{
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+}
+.bottom-sign text{
+  margin-left: 10px;
+  color: white;
+  font-size: 12px;
+}
+.check-login{
+  right: 10px;
+  width: 70px;
+  height: 30px;
+  background-color: #0081ff;
+  margin-right: 0;
+  color: #fff;
+  font-size: 13px;
+  padding: 10rpx 20rpx;
+  outline: none;
+  border: none;
+  border-radius:16px;
+  vertical-align:middle;
+  line-height:22px
+}

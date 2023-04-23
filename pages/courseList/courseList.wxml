@@ -1,4 +1,4 @@
-<view class="course-list">
+<view class="course-list" wx:if="{{loginStatus}}">
   <view class="course-item" wx:for="{{courseList}}" wx:key="courseId" wx:if="{{item.status == '1'}}">
     <view class="course-info">
       <text class="course-name">{{item.courseName}}</text>
@@ -9,4 +9,11 @@
     <button wx:if="{{item.checkinstatus == '已打卡'}}" disabled="true" class="check-in-btn" bindtap="handleCheckIn" data-id="{{item._id}}">{{item.checkinstatus}}</button>
     <button wx:if="{{item.checkinstatus == '打卡'}}" class="check-in-btn" bindtap="handleCheckIn" data-id="{{item._id}}">{{item.checkinstatus}}</button>
   </view>
+</view>
+<view class="nologin" wx:else>
+<view class="bottom-sign">
+<text>您还没有登录，登录后即可使用全部功能</text>
+<button class="check-login" bindtap="quickLogin">立即登录</button>
+</view>
+
 </view>

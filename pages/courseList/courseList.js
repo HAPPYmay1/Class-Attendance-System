@@ -1,7 +1,22 @@
 // pages/courseList/courseList.js
 Page({
   data: {
-    courseList:[]
+    courseList:[],
+    loginStatus:false
+  },
+  onLoad(){
+    let openid = wx.getStorageSync('userInfo').openid
+    if(openid != null){
+      this.init();
+      this.setData({
+        loginStatus:true
+      })
+    }else{
+      wx.showToast({
+        title: '请登录后使用',
+        icon:'none'
+      })
+    }
   },
   //获取打卡课程列表
   init:function(){
@@ -35,11 +50,11 @@ Page({
               //课程代码，不是唯一标识符_id
               let st = courseList[i].checkInStartTime + " " + courseList[i].startHour
               let et = courseList[i].checkInEndDay + " " + courseList[i].endHour
-              console.log(st,et);
+              // console.log(st,et);
               let courseStartTime = new Date(st).getTime();
               let courseEndTime = new Date(et).getTime();
-              console.log("开始",courseStartTime);
-              console.log("结束",courseEndTime);
+              // console.log("开始",courseStartTime);
+              // console.log("结束",courseEndTime);
               //获取打卡情况信息，查询学生是否已经打卡
               wx.cloud.callFunction({
                 name:"attdenceCourse",
@@ -50,7 +65,7 @@ Page({
                 },
                 success: res =>{
                   let checkinstatus = res.result.data
-                  console.log('第',i,'个',res.result.data);
+                  // console.log('第',i,'个',res.result.data);
                   if(checkinstatus.length != 0){
                     courseList[i].checkinstatus = "已打卡"
                     this.setData({
@@ -140,15 +155,6 @@ Page({
       }
     })
   },
-
-  onLoad: function (){
-    this.init()
-  },
-
-  onShow:function(){
-    this.init()
-  },
-
    // 打卡按钮点击事件
   handleCheckIn: function(e) {
     //通过点击事件获取该课程ID
@@ -173,5 +179,10 @@ Page({
         console.error(err);
       }
     });
+  },
+  quickLogin(){
+    wx.switchTab({
+      url: '../user-center/usercenter',
+    })
   }
 })

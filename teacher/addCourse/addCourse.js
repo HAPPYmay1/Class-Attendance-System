@@ -90,6 +90,10 @@ Page({
       'course.class':this.data.class[e.detail.value],
       cs:1
     })
+    if(this.data.cn==1){
+      // console.log(this.data.course.courseName,this.data.course.class);
+      this.findCourse_id(this.data.course.courseName,this.data.course.class);
+    }
   },
   onCourseName:function(e){
     // console.log(this.data.courseName[e.detail.value]);
@@ -97,18 +101,43 @@ Page({
       'course.courseName':this.data.courseName[e.detail.value],
       cn:1
     })
+    if(this.data.cs==1){
+      // console.log(this.data.course.courseName,this.data.course.class);
+      this.findCourse_id(this.data.course.courseName,this.data.course.class);
+    }
+  },
+  //查找所选课程的id值
+  findCourse_id(courseName,classes){
+    wx.cloud.callFunction({
+      name:'addCourse',
+      data:{
+        option:'findId',
+        cname:courseName,
+        cclass:classes
+      },
+      success: res =>{
+        // console.log(res.result);
+        this.setData({
+          course_id :res.result
+        })
+      },
+      fail: err =>{
+        console.log(err);
+      }
+    })
   },
   onFormSubmit: function(e) {
     var formData = e.detail.value;
-    console.log(formData);
+    // console.log(formData);
     const workId = wx.getStorageSync('teacherInfo').workId
-    console.log(workId);
+    // console.log(workId);
     // // console.log(this.data.st);
     if(!this.data.st && !this.data.sh && !this.data.et && !this.data.eh && !this.data.cn && !this.data.cs){
       wx.showToast({
         title: '请填写完整',
         icon:"error"
       })
+      return
       //只修改开始日期
     }else{
       if(this.data.st == 0){
@@ -128,6 +157,7 @@ Page({
           title: '请填写完整',
           icon:'error'
         })
+        return
       }
       let start = formData.checkInStartTime +" "+formData.startHour
       let end = formData.checkInEndTime +" "+formData.endHour
@@ -138,13 +168,14 @@ Page({
       // console.log("转化之后的开始时间",courseStartTime);
       // console.log("转化之后的结束时间",courseEndTime);
       if(courseStartTime<courseEndTime){
-        console.log(formData);
+        // console.log("这是我们的formData",formData);
         wx.cloud.callFunction({
         name:"addCourse",
         data:{
           option:'add',
           courseInfo:{
             courseName:formData.corName,
+            courseId:this.data.course_id,
             workId:workId,
             courseClass:formData.atnClass,
             checkInStartTime:formData.checkInStartTime,

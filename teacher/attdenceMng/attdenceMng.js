@@ -37,7 +37,7 @@ Page({
   },
   editCourse: function(e) {
     const course_Id = e.currentTarget.dataset.id;
-    console.log('编辑考勤课程');
+    // console.log('编辑考勤课程');
     wx.setStorageSync('course_Id', course_Id)
     wx.navigateTo({
       url: '../editCourse/editCourse',
@@ -81,7 +81,7 @@ Page({
     })
   },
   addCourse:function(){
-    console.log("点击进入添加课程");
+    // console.log("点击进入添加课程");
     wx.redirectTo({
       url: '../addCourse/addCourse',
     })

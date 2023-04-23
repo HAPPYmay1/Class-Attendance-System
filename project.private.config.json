@@ -10,7 +10,7 @@
       "list": [
         {
           "name": "",
-          "pathName": "pages/index/index",
+          "pathName": "pages/courseList/courseList",
           "query": "",
           "launchMode": "default",
           "scene": null
