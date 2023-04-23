@@ -1,0 +1,12 @@
+<view class="course-list">
+  <view class="course-item" wx:for="{{courseList}}" wx:key="courseId" wx:if="{{item.status == '1'}}">
+    <view class="course-info">
+      <text class="course-name">{{item.courseName}}</text>
+      <text class="course-status">{{item.courseTeacher}}</text>
+      <text class="course-time">{{item.checkInStartTime}} {{item.startHour}}-{{item.checkInEndDay}} {{item.endHour}}</text>
+    </view>
+    <!-- <button wx:if="{{item != null}}" class="check-in-btn" disabled="true" bindtap="handleCheckIn" data-id="{{item._id}}">已打卡</button> -->
+    <button wx:if="{{item.checkinstatus == '已打卡'}}" disabled="true" class="check-in-btn" bindtap="handleCheckIn" data-id="{{item._id}}">{{item.checkinstatus}}</button>
+    <button wx:if="{{item.checkinstatus == '打卡'}}" class="check-in-btn" bindtap="handleCheckIn" data-id="{{item._id}}">{{item.checkinstatus}}</button>
+  </view>
+</view>

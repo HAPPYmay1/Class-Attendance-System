@@ -1,0 +1,35 @@
+<form bindsubmit="onFormSubmit">
+<view class="container">
+    <view class="form-group">
+      <text class="label">课程名称：</text>
+      <input class="input" 	disabled="true" type="text" name="name" value="{{course.courseName}}" bindchange="onNameChange"/>
+    </view>
+    <view class="form-group">
+      <text class="label">参与班级：</text>
+      <input class="input" type="text" name="class" value="{{course.courseClass}}" />
+    </view>
+    <view class="form-group">
+      <text class="label">开始时间：</text>
+      <!-- 开始的日期时间 -->
+      <picker mode="date" name="checkInStartTime" value="{{checkInStartTime}}" bindchange="onStartTimeChange">
+        <text class="input">{{course.checkInStartTime}}</text>
+      </picker>
+      <!-- 开始的具体时间 -->
+      <picker mode="time" name="startHour" value="{{startHour}}" bindchange="startChange">
+        <text class="input">{{course.startHour}}</text>
+      </picker>
+    </view>
+    <view class="form-group">
+      <text class="label">结束时间：</text>
+           <!-- 结束的日期时间 -->
+      <picker mode="date" name="checkInEndTime" value="{{checkInEndDay}}" bindchange="onEndTimeChange">
+        <text class="input">{{course.checkInEndDay}}</text>
+      </picker>
+      <!--结束的具体时间 -->
+      <picker mode="time" name="endHour" value="{{startHour}}" bindchange="endChange">
+        <text class="input">{{course.endHour}}</text>
+      </picker>
+    </view>
+    <button form-type="submit" class="btn-update">更新</button>
+</view>
+</form>

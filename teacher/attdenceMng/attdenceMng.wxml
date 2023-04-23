@@ -1,0 +1,25 @@
+<view class="container">
+  <view class="header" bindtap="addCourse">
+    <image class="logo" src="/image/add.png"></image>
+    <text class="title">添加考勤课程</text>
+  </view>
+</view>
+<!-- <view class="course_show" wx:for="{{teaCourselist}}">
+课程名称
+<text>{{item.courseName}}</text>
+</view> -->
+<!-- WXML代码 -->
+<view class="course-item" wx:if="{{courseNum}}" wx:for="{{teaCourselist}}" wx:key="_id">
+  <view class="course-info">
+    <text class="course-name">{{item.courseName}}</text>
+    <text class="course-time">{{item.checkInStartTime}} {{item.startHour}} - {{item.checkInEndDay}} {{item.endHour}}</text>
+    <text class="course-class">{{item.courseClass}}</text>
+  </view>
+  <view class="course-actions">
+    <button class="edit-button" bindtap="editCourse" data-id="{{item._id}}">编辑</button>
+    <button class="delete-button" bindtap="deleteCourse" data-id="{{item._id}}">删除</button>
+    <image class="arrow" src="../../image/arrow_right.png"></image>
+  </view>
+</view>
+<view class="space" wx:if="{{!courseNum}}">无课程</view>
+

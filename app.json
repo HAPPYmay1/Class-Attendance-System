@@ -1,0 +1,67 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/user-center/usercenter",
+    "pages/user-detail/userdetail",
+    "pages/register/newlogin",
+    "pages/personalInfo/personalInfo",
+    "pages/courseList/courseList",
+    "pages/checkin/checkin"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#33CCFF",
+    "navigationBarTitleText": "掌上南交",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "./image/index.png",
+        "selectedIconPath": "./image/index-sld.png"
+      },
+      {
+        "pagePath": "pages/courseList/courseList",
+        "text": "课程列表",
+        "iconPath": "./image/book.png",
+        "selectedIconPath": "./image/book-fill.png"
+      },
+      {
+        "pagePath": "pages/user-center/usercenter",
+        "text": "个人中心",
+        "iconPath": "./image/me.png",
+        "selectedIconPath": "./image/me-sld.png"
+      }
+    ]
+  },
+  "subPackages": [
+    {
+      "root": "teacher",
+      "pages": [
+        "teacherindex/index",
+        "setting/setting",
+        "teaInfo/teaInfo",
+        "login/login",
+        "attdenceMng/attdenceMng",
+        "editCourse/editCourse",
+        "addCourse/addCourse",
+        "checkCourse/checkCourse",
+        "courseStuMng/courseStuMng",
+        "stuList/stuList",
+        "atdDate/atdDate",
+        "courseClassData/courseClassData",
+        "atdChartShow/atdChartShow"
+      ]
+    }
+  ],
+  "sitemapLocation": "sitemap.json",
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
+  "requiredPrivateInfos": [
+    "getLocation"
+  ]
+}

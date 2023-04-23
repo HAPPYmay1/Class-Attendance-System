@@ -1,0 +1,63 @@
+.map-wrapper {
+  height: 230px;
+}
+.map_location{
+  margin: 0 auto;
+  background-color: green;
+  width: 150px;
+  height: 150px;
+}
+.map {
+  margin: 0 auto;
+  width: 150px;
+  height: 150px;
+}
+
+.map-wrapper input{
+  margin-top: 5px;
+  border: 1px solid black;
+}
+
+.get-location {
+  margin-top: 5px;
+  width: 100px;
+  height: 40px;
+}
+
+.camera-wrapper {
+  margin: 0 auto;
+  height: 200px;
+}
+
+.camera {
+  margin-top: 5px;
+  margin:0 auto;
+  width: 150px;
+  height: 150px;
+}
+
+.take-photo {
+  margin-top: 5px;
+  width: 100px;
+  height: 40px;
+  /* left: 50%; */
+  /* transform: translateX(-50%); */
+}
+
+.check-in {
+  margin-top: 5px;
+  width: 200px;
+  height: 50px;
+  border-radius: 25px;
+  font-size: 20px;
+  color: #ffffff;
+  background-color: #0099ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.check-in:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}

@@ -1,0 +1,22 @@
+page{
+  background-color: rgb(127, 157, 255);
+}
+.login_ui{
+  margin: 120px auto;
+  width: 200px;
+  height: 220px;
+  background-color: white;
+  border-radius: 10%;
+}
+.login_content{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  top:60px;
+}
+.login_info{
+  margin: 4px 5px;
+}
+.login_info input{
+  background-color: rgb(221, 220, 220);
+}

@@ -1,0 +1,42 @@
+page{
+  background-color: rgb(248, 248, 248);
+}
+.container{
+  margin: 10px 10px;
+  background-color: white;
+  border-radius: 8px;
+}
+.viewbar{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  height: 30px;
+  font-family:'YouYuan'
+}
+.viewbar text{
+  font-size: 14px;
+  padding: 5px;
+  /* float: left; */
+}
+.viewbar text:active{
+  /* color: rgb(248, 248, 248); */
+  background-color: rgb(248, 248, 248);
+}
+.idbar{
+  display: flex;
+  flex-direction: row;
+  /* justify-content: center; */
+  align-content: center;
+  height: 30px;
+  font-family:'YouYuan'
+}
+.idbar text{
+  font-size: 14px;
+  padding: 5px;
+  float: left;
+}
+.text_id{
+  color: rgb(156, 156, 156);
+  font-size: 30px;
+}

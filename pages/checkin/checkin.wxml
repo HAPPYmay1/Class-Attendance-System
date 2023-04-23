@@ -1,0 +1,19 @@
+<form bindsubmit="signin">
+<view class="container">
+  <view class="map-wrapper">
+    <map id="myMap" class="map" latitude="{{latitude}}" longitude="{{longitude}}" markers="{{markers}}" show-location></map>
+    <!-- <view class="map_location"></view> -->
+    <input type="text" name="location" value="{{address || '点击获取当前位置'}}" disabled="true"></input>
+    <button class="get-location" bindtap="getLocation">获取地址</button>
+  </view>
+
+  <view class="camera-wrapper">
+    <camera class="camera" device-position="front" flash="off" bindstop="onCameraStop"></camera>
+    <button wx:if="{{!sucgetphoto}}" class="take-photo" disabled="{{sucgetloction}}" bindtap="takePhoto">重新拍摄</button>
+    <button wx:else class="take-photo" disabled="{{sucgetloction}}" bindtap="takePhoto">拍摄人脸</button>
+
+  </view>
+
+  <button class="check-in" disabled="{{sucgetloction || sucgetphoto}}" form-type="submit">打卡</button>
+</view>
+</form>

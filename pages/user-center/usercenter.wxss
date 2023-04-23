@@ -1,0 +1,68 @@
+page{
+  background-color: rgb(245, 244, 244);
+}
+/*个人中心顶部*/
+.faceimg{
+  width: 200rpx;
+  height: 200rpx;
+  border-radius:50px;
+  background-color: white;
+  margin-bottom: 10px;
+}
+.faceimg button{
+  width: 200rpx;
+  height: 200rpx;
+  border-radius:50px;
+}
+.faceimg image{
+  width: 200rpx;
+  height: 200rpx;
+  border-radius:50px;
+}
+
+/*个人中心条目*/
+.item_all{
+  margin-top: 15rpx;
+}
+.item{
+  display: flex;
+  align-items: center;
+  height: 90rpx;
+  background-color: white;
+  border-bottom:dashed 4rpx rgb(180, 180, 180);
+}
+.item_name{
+  font-size: 42rpx;
+  margin-left: 30rpx;
+}
+.right_arrow{
+  border:solid black;
+  border-width: 0 3px 3px 0;
+  padding: 3px;
+  position: absolute;
+  right: 15px;
+  /*margin-left:66%*/
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+.item button{
+  width: 100%;
+  background: white;
+  border: none;
+  text-align: left;
+  padding: 0;
+  line-height: 1.3;
+}
+.item button::after{
+  border: none;
+  border-radius: 0;
+}
+.loginout{
+  margin-top: 10px;
+}
+.loginout_btn{
+  background-color: white;
+}
+.press{
+  color: red;
+}

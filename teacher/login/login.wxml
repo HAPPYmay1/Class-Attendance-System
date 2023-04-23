@@ -1,0 +1,13 @@
+<view class="login_ui">
+  <view class="login_content">
+    <view class="login_info">
+      <text>账号</text>
+      <input type="text" maxlength="14" name="account" id="1" focus="true" bindinput="get_act"/>
+    </view>
+    <view class="login_info">
+      <text>密码</text>
+      <input type="text" maxlength="16" password="true" name="password" id="2"  focus="true" bindinput="get_psw"/>
+    </view>
+    <button bindtap="login">登录</button>
+  </view>
+</view>

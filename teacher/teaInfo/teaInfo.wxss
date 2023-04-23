@@ -1,0 +1,42 @@
+page{
+  background-color:rgb(245, 245, 245);
+}
+.container{
+  background-color: white;
+}
+.listsum{
+  width: 100%;
+}
+.listsum:active{
+  background-color: rgb(245, 245, 245);
+}
+.infoList{
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: space-between;
+  margin-left:25px ;
+  border-top:solid 1px rgb(245, 245, 245);
+}
+.infoList text{
+  padding:10px 0px;
+}
+.detailInfo{
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content:center;
+  text-align: right;
+}
+.arrow_right{
+  margin-top: 15px;
+  margin-right: 15px;
+  margin-left: 10px;
+  width: 8px;
+  height: 8px;
+  float: right;
+  border:solid rgb(200,200,200);
+  border-width: 0 2px 2px 0;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}

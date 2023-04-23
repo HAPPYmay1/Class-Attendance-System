@@ -1,0 +1,12 @@
+<view class="container">
+  <view class="header">
+    <image class="logo" src="/image/checkCourse.png"></image>
+    <text class="title">{{classes}}人员名单 共 {{num}} 人</text>
+  </view>
+</view>
+<view class="course-item" wx:for="{{stuName}}" wx:key="_id">
+  <view class="course-info">
+    <text class="course-name">{{item.userName}}</text>
+    <!-- <text class="course-class">{{item.courseClass}}</text> -->
+  </view>
+</view>

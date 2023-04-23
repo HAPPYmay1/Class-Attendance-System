@@ -1,0 +1,13 @@
+<view class="container">
+  <view class="header">
+    <image class="logo" src="/image/classmng.png"></image>
+    <text class="title">各课程考勤</text>
+  </view>
+</view>
+<view class="course-item" wx:if="{{courseNum}}" wx:for="{{teaCourselist}}" wx:key="_id">
+  <view class="course-info">
+    <text class="course-name">{{item.courseName}}</text>
+  </view>
+  <button class="edit-button" data-id="{{item.courseName}}" bindtap="checkStu">查看</button>
+</view>
+<view class="space" wx:if="{{!courseNum}}">无课程</view>

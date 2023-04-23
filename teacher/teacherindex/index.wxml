@@ -1,0 +1,53 @@
+<view class="container">
+  <view class="header">
+    <image class="logo" src="/image/icon_teacher.png"></image>
+    <text class="title">教师端</text>
+  </view>
+</view>
+  <!-- 资料模块 -->
+  <view class="teacherInfo">
+    <view  class="faceimg">
+      <image src="/image/touxiang.png"></image>
+    </view>
+    <view class="teacherName">
+      <text>姓名：{{teacherInfo.teaName}}</text>
+      <text>工号：{{teacherInfo.workId}}</text>
+    </view>
+  </view>
+  <!-- 功能模块 -->
+  <view class="teacherFunction">
+  <view class="square">
+    <button class="func" bindtap="checkCourse">
+      <image src="/image/coursemanage.png"></image>
+      <text>课程查询</text>
+    </button>
+    <button class="func" bindtap="attendanceManage">
+      <image src="/image/attendance.png"></image>
+      <text>考勤管理</text>
+    </button>
+    <button class="func" bindtap="courseStuMng">
+      <image src="/image/stumanage.png"></image>
+      <text>课程学生管理</text>
+    </button>
+  </view>
+  <view class="square">
+    <button class="func" bindtap="atdDate">
+      <image src="/image/showData.png"></image>
+      <text>考勤数据总览</text>
+    </button>
+    <button class="func" bindtap="setting">
+      <image src="/image/setting.png"></image>
+      <text>系统设置</text>
+    </button>
+    <button class="func">
+    </button>
+  </view>
+  <view class="square">
+    <button class="func">
+    </button>
+    <button class="func">
+    </button>
+    <button class="func">
+    </button>
+  </view>
+  </view>

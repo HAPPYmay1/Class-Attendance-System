@@ -1,0 +1,39 @@
+<view class="container">
+  <view class="listsum">
+    <view class="infoList">
+      <text>名字</text>
+      <view class="detailInfo"> 
+      <text>{{teacherInfo.teaName}}</text>
+      <view class="arrow_right"></view>
+      </view>
+    </view>
+  </view>
+  <view class="listsum">
+    <view class="infoList">
+      <text>性别</text>
+      <view class="detailInfo"> 
+      <text>{{teacherInfo.sexual}}</text>
+      <view class="arrow_right"></view>
+      </view>
+    </view>
+  </view>
+  <view class="listsum">
+    <view class="infoList">
+      <text>电话</text>
+      <view class="detailInfo"> 
+      <text>{{teacherInfo.teaPhone}}</text>
+      <view class="arrow_right"></view>
+      </view>
+    </view>
+  </view>
+  <view class="listsum">
+    <view class="infoList">
+      <text>职称</text>
+      <view class="detailInfo"> 
+      <text>{{teacherInfo.teaRank}}</text>
+      <view class="arrow_right"></view>
+      </view>
+    </view>
+  </view>
+</view>
+

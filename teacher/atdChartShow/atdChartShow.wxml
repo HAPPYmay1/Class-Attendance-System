@@ -1,0 +1,13 @@
+<view class="container">
+  <view class="header">
+    <image class="logo" src="/image/classmng.png"></image>
+    <text class="title">{{classes}} {{coursename}}考勤情况一览</text>
+  </view>
+</view>
+<view>
+<text>课程平均签到率为：{{atdDate1}}</text>
+
+<view class="ec-container">
+     <ec-canvas id="my-echart" canvas-id="echart-pie" ec="{{ec}}"></ec-canvas>
+</view>
+</view>

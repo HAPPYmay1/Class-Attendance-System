@@ -1,0 +1,14 @@
+<view class="container">
+  <view class="info">
+    <view class="name">姓名：{{userInfo.userName || '未填写'}}</view>
+    <view class="phone">手机号码：{{userInfo.userPhone || '未填写'}}</view>
+    <view class="id">学号：{{userInfo.userId || '未填写'}}</view>
+    <view class="academy">学院：{{userInfo.userAcademy || '未填写'}}</view>
+    <view class="major">专业：{{userInfo.userMajor || '未填写'}}</view>
+    <view class="grade">年级：{{userInfo.userGrade || '未填写'}}</view>
+    <view class="classes">班级：{{userInfo.classes || '未填写'}}</view>
+
+    
+
+  </view>
+</view>

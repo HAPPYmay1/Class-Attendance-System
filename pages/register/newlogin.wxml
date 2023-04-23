@@ -1,0 +1,43 @@
+<form bindsubmit="register">
+  <view class="root">
+    <view class="item">
+      <text>姓名<text style="color: red;">*</text>：</text>
+      <input placeholder="请输入您的姓名" name="userName"></input>
+    </view>
+  <view class="item">
+    <text>电话<text style="color: red;" type="number">*</text>：</text>
+    <input placeholder="请输入11位手机号码" name="userPhone"></input>
+  </view>
+
+  <view class="item">
+    <text>学号<text style="color: red;" type="number">*</text>：</text>
+    <input placeholder="请输入您的学号" name="userId"></input>
+  </view>
+
+  <view class="item">
+    <text>分院专业：</text>
+    <picker bindchange="bindchangefy" bindcolumnchange="bindchangefyColumnChange" mode="multiSelector" value="{{multiIndex}}" range="{{multiArray}}">
+      <view class="picker">
+      <input placeholder="请选择你的分院专业" name="userAcademy" disabled="true" value="{{fengyuan}}"></input>
+      </view>
+    </picker>
+  </view>
+  <view class="item">
+    <text>年级：</text>
+    <picker bindchange="bindchangeGrade" value="{{grade}}" range="{{gradeDetail}}" name="userGrade">
+      <view class="picker">
+        <input placeholder="请选择你的年级" value="{{grade}}" disabled="true"></input>
+      </view>
+    </picker>
+  </view>
+    <view class="item">
+      <text>班级：</text>
+      <picker bindchange="bindchangebj" value="{{classes}}" range="{{classesdetail}}" name="classes">
+        <view class="picker">
+          <input placeholder="请选择你的班级" value="{{classes}}" disabled="true"></input>
+        </view>
+      </picker>
+    </view>
+    <button class="zhuce_btn" form-type="submit">确认</button>
+  </view>
+</form>

@@ -1,0 +1,29 @@
+.root{
+  margin: 30rpx 30rpx;
+}
+.item{
+  margin-bottom: 30rpx;
+  display: flex;
+  align-items: center;
+}
+.item input{
+  border-bottom: solid 1px gray;
+  padding: 10rpx;
+  font-size: 32rpx;
+}
+.down_arrow{
+  border:solid black;
+  border-width: 0 3px 3px 0;
+  padding: 3px;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+.picker input{
+  font-size: 32rpx;
+}
+.zhuce_btn{
+  margin: 50rpx;
+  background: #33CCEE;
+  color: white;
+  border-radius: 60rpx;
+}

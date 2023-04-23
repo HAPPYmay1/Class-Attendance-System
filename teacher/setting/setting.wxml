@@ -1,0 +1,15 @@
+<view class="container">
+  <view class="viewbar" bindtap="teaInfo">
+  <!-- <button class="contentbtn"><text>个人资料</text></button> -->
+  <text>个人资料</text>
+  </view>
+  <view class="viewbar" bindtap="untilWx">
+  <!-- <button class="contentbtn"><text>解绑微信</text></button> -->
+  <text>解绑微信</text>
+  </view>
+  <view class="idbar">
+  <!-- <button class="contentbtn"><text>身份码</text></button> -->
+  <text>身份码:</text>
+  <text class="text_id" style="font-size: 15px;">{{openid}}</text>
+  </view>
+</view>
